@@ -2,12 +2,10 @@
 
 //Route authors
 if(isset($_GET['authors'])):
-    include '../app/controllers/authorsController.php';
-    \App\Controllers\AuthorsController\indexAction($connexion);
+    include '../app/routers/authors.php';
 //Route photos
 elseif(isset($_GET['photos'])):
-    include '../app/controllers/photosController.php';
-    \App\Controllers\PhotosController\indexAction($connexion);
+    include '../app/routers/photos.php';
 //Route par défaut
 else:
     include_once '../app/controllers/pagesController.php';

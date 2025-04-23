@@ -21,7 +21,7 @@
                       <?php echo \Core\Helpers\truncate($photo['resume'], 50); ?>
                     </p>
                     <a
-                      href="photo.html"
+                      href="?photos=show&id=<?php echo $photo['photoId']; ?>"
                       class="mt-4 inline-block bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-700"
                     >
                       En savoir plus
