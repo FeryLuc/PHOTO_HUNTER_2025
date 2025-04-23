@@ -5,7 +5,7 @@ use \PDO;
 
 function indexAction(PDO $connexion) {
     include_once '../app/models/photosModel.php';
-    $photos = \App\Models\PhotosModel\findAll($connexion);
+    $photos = \App\Models\PhotosModel\findAll($connexion, 6);
    
     global $content, $title;
     $title = "Catalogue";
