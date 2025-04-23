@@ -14,7 +14,7 @@
               Home
             </a>
             <a
-              href="photos.html"
+              href="?photos"
               class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
             >
               Photos
