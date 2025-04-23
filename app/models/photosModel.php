@@ -25,3 +25,15 @@ function findOneById(PDO $connexion, string $id):array {
     $photo = $rs->fetch(PDO::FETCH_ASSOC);
     return $photo;
 }
+function findAllByAuthorId(PDO $connexion, int $id):array {
+    $sql = "SELECT *, p.id AS photoId, a.id AS authorId
+            FROM photos p 
+            JOIN authors a ON p.author_id = a.id 
+            WHERE p.author_id = :id
+            ORDER BY p.title ASC;";
+    $rs = $connexion->prepare($sql);
+    $rs->bindValue(':id', $id, PDO::PARAM_INT);
+    $rs->execute();
+    $photos = $rs->fetchAll(PDO::FETCH_ASSOC);
+    return $photos;
+}
