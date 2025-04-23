@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Hunter</title>
-</head>
-<body>
-    <header></header>
-    <main>
-        <?php echo $content ?>
+<html lang="fr">
+  <head>
+    <?php include_once '../app/views/templates/partials/_head.php'; ?>
+  </head>
+  <body class="bg-gray-300">
+    <?php include_once '../app/views/templates/partials/_nav.php'; ?>
+
+    <main class="my-10">
+      <?php include_once '../app/views/templates/partials/_main.php'; ?>
     </main>
-    <footer></footer>
-</body>
+
+    <footer class="bg-white shadow-md">
+      <?php include_once '../app/views/templates/partials/_footer.php'; ?>
+    </footer>
+  </body>
 </html>
